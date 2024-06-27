@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* ### Primary
+
+- Tomato: hsl(4, 100%, 67%)
+
+### Neutral
+
+- Dark Slate Grey: hsl(234, 29%, 20%)
+- Charcoal Grey: hsl(235, 18%, 26%)
+- Grey: hsl(231, 7%, 60%)
+- White: hsl(0, 0%, 100%) */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: hsl(235, 18%, 26%);
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+main{
+    background-color: white;
+    overflow: hidden;
+    border-radius: 22px;
+    display: flex;
+}
+.default{
+    width: 53rem;
+    display: flex;
+}
+main .left{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 60px;
+    padding-right: 20px;
+    justify-content: center;
+}   
+main h1{
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+}
+main p,button,article,ul{
+    font-size: 16px;
+}
+main p{
+    color: hsl(234, 29%, 20%);
+    font-weight: 400;
+}
+main ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+main ul li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+main article{
+    font-weight: 700;
+    color: hsl(234, 29%, 20%);
+    font-size: 12px;
+}
+main input{
+    display: block;
+    width: 21.5rem;
+    padding: 15px;
+    color:  hsl(231, 7%, 60%);
+    border: 0.5px solid  hsl(231, 7%, 60%);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+main button{
+    border: none;
+    color: white;
+    background-color: hsl(231, 54%, 15%);
+    padding: 15px;
+    width: 23.5rem;
+    border-radius: 5px;
+    font-weight: 700;
+}
+main button:active, button:hover{
+    background-color: hsl(4, 100%, 67%);
+}
+main .contain{
+    display: flex;
+    justify-content: space-between;
+    width: 23.5rem;
+}
+main .contain .error{
+    color: hsl(4, 100%, 67%);
+}
+main .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+}
+main .right img{
+    height: 500px;
+    width: 20rem;
+}
+.fail{
+    border: 1px solid red;
+    color: red;
+    background-color: rgb(246, 207, 207);
+}
+.success{
+    flex-direction: column;
+    width: 23.5rem;
+    padding: 30px 40px;
+    gap: 1.5rem;
+    display: none;
+}
+.success img{
+    width: 70px;
+}
+
+@media(max-width:700px){
+    main{
+        flex-direction: column-reverse;
+        width: 425.5px !important;
+    }
+    main .right{
+        padding: 0px;
+    }
+    main .left{
+        margin-left: -30px;
+    }
+    main .right img{
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+    .success{
+        height: 100vh;
+        border-radius: 0px;
+        width: 375px !important;
+        padding: 30px 30px;
+        padding-top: 40px;
+    }
+    #dismiss{
+        margin-top: 25vh;
+    }
+}
